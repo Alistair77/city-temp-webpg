@@ -34,7 +34,7 @@ app.post("/", function(req, res) {
 
       const imgUrl = ("http://openweathermap.org/img/wn/"+icon+"@2x.png")
 
-      res.send("<h2>Thanks for the info heres UR WEATHER </h2><br><img src="+imgUrl+ "><h1>The temperature in london is " + temp + " degrees celcious</h1><br><h2>the weather currently " + description+", Have a nice day!!!</h2>");
+      res.send("<h2>Thanks for the info heres UR WEATHER </h2><br><img src="+imgUrl+ "><h1>The temperature in "+location+" is " + temp + " degrees celcious</h1><br><h2>the weather currently " + description+", Have a nice day!!!</h2>");
 
     })
 
@@ -66,7 +66,7 @@ app.post("/", function(req, res) {
 
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT ||3000, function() {
 
   console.log("runingg");
 
